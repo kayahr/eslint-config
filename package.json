@@ -1,0 +1,18 @@
+{
+  "name": "@kayahr/eslint-config",
+  "version": "1.0.0",
+  "description": "kayahr eslint config for TypeScript projects",
+  "main": "eslintrc.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kayahr/eslint-config"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 3.7.0",
+    "@typescript-eslint/parser": ">= 3.7.0",
+    "eslint": ">= 7.5.0",
+    "eslint-plugin-deprecation": ">= 1.1.0",
+    "eslint-plugin-simple-import-sort": ">= 5.0.3"
+  }
+}
