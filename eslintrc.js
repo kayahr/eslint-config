@@ -136,8 +136,6 @@ module.exports = {
 
         /**
          * Disallow the type conversion with shorter notations.
-         *
-         * Disabled because of result of internal code-style discussion.
          */
         "no-implicit-coercion": "off",
 
@@ -486,10 +484,8 @@ module.exports = {
 
         /**
          * Disallow duplicate module imports
-         *
-         * TODO Disabled for now because of some bug with parsing new `export * as ns` syntax.
          */
-        // "no-duplicate-imports": [ "warn", { "includeExports": true } ],
+        "no-duplicate-imports": [ "warn", { "includeExports": true } ],
 
         /** Disallow unnecessary computed property keys in objects and classes */
         "no-useless-computed-key": "warn",
@@ -548,14 +544,16 @@ module.exports = {
 
         // ============================================================================================================
         // Plugin: typescript
+        // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
         // ============================================================================================================
 
         /**
          * Requires using either T[] or Array<T> for arrays
-         *
-         * Disabled because of result of internal code-style discussion.
          */
-        "@typescript-eslint/array-type": "off",
+        "@typescript-eslint/array-type": [ "warn", {
+                "default": "array-simple"
+            }
+        ],
 
         /** Bans // @ts-<directive> comments from being used */
         "@typescript-eslint/ban-ts-comment": [
@@ -565,11 +563,30 @@ module.exports = {
         ],
 
         /**
-         * Enforces consistent usage of type assertions
-         *
-         * Disabled because of result of internal code-style discussion.
+         * Bans some built-in types. Function and object is allowed because the recommended replacements are not
+         * compatible.
          */
-        "@typescript-eslint/consistent-type-assertions": "off",
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "extendDefaults": true,
+                "types": {
+                    "Function": false,
+                    "object": false
+                }
+            }
+        ],
+
+        /**
+         * Enforces consistent usage of type assertions
+         */
+        "@typescript-eslint/consistent-type-assertions": [
+            "warn",
+            {
+                "assertionStyle": "as",
+                "objectLiteralTypeAssertions": "allow"
+            }
+        ],
 
         /**
          * Consistent with type definition either interface or type
@@ -851,7 +868,9 @@ module.exports = {
         /** Restricts the types allowed in boolean expressions. */
         "@typescript-eslint/strict-boolean-expressions": [
             "warn", {
-                "allowNullableObject": true
+                "allowNullableObject": false,
+                "allowString": false,
+                "allowNumber": false
             }
         ],
 
