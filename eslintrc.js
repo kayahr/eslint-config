@@ -572,7 +572,8 @@ module.exports = {
                 "extendDefaults": true,
                 "types": {
                     "Function": false,
-                    "object": false
+                    "object": false,
+                    "Object": false
                 }
             }
         ],
