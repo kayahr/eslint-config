@@ -534,7 +534,8 @@ module.exports = {
         // Plugin: simple-import-sort
         // ============================================================================================================
 
-        "simple-import-sort/sort": "warn",
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
 
         // ============================================================================================================
         // Plugin: deprecation
