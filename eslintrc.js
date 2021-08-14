@@ -506,8 +506,18 @@ module.exports = {
         /** Require method and property shorthand syntax for object literals */
         "object-shorthand": "warn",
 
-        /** Require using arrow functions for callbacks */
-        "prefer-arrow-callback": "warn",
+        /** 
+         * Require using arrow functions for callbacks.
+         *
+         * Names functions are an exception because sometimes a named function is needed to improve stack
+         * trace readability and arrow functions don't support this.
+         */
+        "prefer-arrow-callback": [
+            "warn",
+            {
+                "allowNamedFunctions": true
+            }
+        ],
 
         /** Require `const` declarations for variables that are never reassigned after declared */
         "prefer-const": "warn",
