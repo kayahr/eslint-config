@@ -599,16 +599,9 @@ module.exports = {
         "@typescript-eslint/consistent-type-definitions": "off",
         
         /**
-         * Disables warning for empty interfaces which extend another interface because this technique is pretty
-         * useful for defining dynamically created methods on a class by using an interface with the same name as
-         * the class and let this interface extend the actual interface which defines the methods.
+         * Disables because empty interface have some value in special situations.
          */
-        "@typescript-eslint/no-empty-interface": [
-            "warn",
-            {
-                "allowSingleExtends": true
-            }
-        ],
+        "@typescript-eslint/no-empty-interface": "off",
 
         /** Require explicit return types on functions and class methods */
         "@typescript-eslint/explicit-function-return-type": [
