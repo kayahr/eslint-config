@@ -349,7 +349,7 @@ module.exports = {
         ],
 
         /** Disallow `Array` constructors */
-	    "no-array-constructor": "warn",
+        "no-array-constructor": "warn",
 
         /** Disallow multiple empty lines */
         "no-multiple-empty-lines": "warn",
@@ -506,7 +506,7 @@ module.exports = {
         /** Require method and property shorthand syntax for object literals */
         "object-shorthand": "warn",
 
-        /** 
+        /**
          * Require using arrow functions for callbacks.
          *
          * Names functions are an exception because sometimes a named function is needed to improve stack
@@ -561,7 +561,8 @@ module.exports = {
         /**
          * Requires using either T[] or Array<T> for arrays
          */
-        "@typescript-eslint/array-type": [ "warn", {
+        "@typescript-eslint/array-type": [
+            "warn", {
                 "default": "array-simple"
             }
         ],
@@ -607,7 +608,7 @@ module.exports = {
          * in generic types
          */
         "@typescript-eslint/consistent-type-definitions": "off",
-        
+
         /**
          * Disables because empty interface have some value in special situations.
          */

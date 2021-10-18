@@ -1,11 +1,9 @@
 {
-    "cSpell.words": [
-        "Reimer",
-        "backticks",
-        "builtins",
-        "destructured",
-        "eqeqeq",
-        "kayahr",
-        "linebreak"
-    ]
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+        "lib": true,
+        "node_modules": true,
+        "coverage": true,
+        "doc/api": true
+    }
 }
