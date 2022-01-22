@@ -112,8 +112,11 @@ module.exports = {
         /** Disallow the use of `arguments.caller` or `arguments.callee` */
         "no-caller": "warn",
 
-        /** Disallow returning value from constructor */
-        "no-constructor-return": "warn",
+        /**
+         * Returns in constructors are rare but there are cases where they make sense like when extending the
+         * Function class.
+         */
+        "no-constructor-return": "off",
 
         /**
          * Disallow empty functions
@@ -835,8 +838,8 @@ module.exports = {
          */
         "@typescript-eslint/prefer-for-of": "warn",
 
-        /** Use function types instead of interfaces with call signatures */
-        "@typescript-eslint/prefer-function-type": "warn",
+        /** Types cannot be used in all situations where an interface is used so this check makes no sense */
+        "@typescript-eslint/prefer-function-type": "off",
 
         /** Enforce the usage of the nullish coalescing operator instead of logical chaining */
         "@typescript-eslint/prefer-nullish-coalescing": "warn",
