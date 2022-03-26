@@ -655,7 +655,11 @@ module.exports = {
                 "selector": "default",
                 "format": [ "camelCase" ],
                 "leadingUnderscore": "forbid",
-                "trailingUnderscore": "forbid"
+                "trailingUnderscore": "forbid",
+                "filter": {
+                    "regex": "^@@observable$",
+                    "match": false
+                }
             },
             {
                 "selector": "property",
@@ -665,7 +669,7 @@ module.exports = {
             },
             {
                 "selector": "property",
-                "format": [ ],
+                "format": [ "camelCase" ],
                 "modifiers": [ "public" ]
             },
             {
