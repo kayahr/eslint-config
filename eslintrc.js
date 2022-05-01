@@ -652,6 +652,11 @@ module.exports = {
         "@typescript-eslint/naming-convention": [
             "warn",
             {
+                "selector": "property",
+                "format": null,
+                "modifiers": [ "requiresQuotes" ]
+            },
+            {
                 "selector": "default",
                 "format": [ "camelCase" ],
                 "leadingUnderscore": "forbid",
@@ -671,6 +676,15 @@ module.exports = {
                 "selector": "property",
                 "format": [ "camelCase" ],
                 "modifiers": [ "public" ]
+            },
+            {
+                "selector": "property",
+                "format": [ "UPPER_CASE" ],
+                "modifiers": [ "public" ],
+                "filter": {
+                    "regex": "_",
+                    "match": true
+                }
             },
             {
                 "selector": "property",
