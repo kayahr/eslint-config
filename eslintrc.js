@@ -209,8 +209,12 @@ module.exports = {
         /** Disallow throwing literals as exceptions */
         "no-throw-literal": "warn",
 
-        /** Disallow unmodified loop conditions */
-        "no-unmodified-loop-condition": "warn",
+        /**
+         * Disallow unmodified loop conditions
+         *
+         * (Disabled because it creates false positives in generator function loops.
+         */
+        "no-unmodified-loop-condition": "off",
 
         /**
          * Disallow unused expressions
@@ -480,7 +484,7 @@ module.exports = {
         "arrow-spacing": "warn",
 
         /** Enforce consistent spacing around `*` operators in generator functions */
-        "generator-star-spacing": "warn",
+        "generator-star-spacing": ["warn", { "before": false, "after": true } ],
 
         /** Disallow arrow functions where they could be confused with comparisons */
         "no-confusing-arrow": "warn",
