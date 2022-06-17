@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 module.exports = {
     "parserOptions": {
         "tsconfigRootDir": ".",
@@ -484,7 +485,7 @@ module.exports = {
         "arrow-spacing": "warn",
 
         /** Enforce consistent spacing around `*` operators in generator functions */
-        "generator-star-spacing": ["warn", { "before": false, "after": true } ],
+        "generator-star-spacing": [ "warn", { "before": true, "after": false } ],
 
         /** Disallow arrow functions where they could be confused with comparisons */
         "no-confusing-arrow": "warn",
