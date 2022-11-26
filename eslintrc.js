@@ -663,7 +663,7 @@ module.exports = {
             },
             {
                 "selector": "default",
-                "format": [ "camelCase" ],
+                "format": [ "camelCase", "PascalCase" ],
                 "leadingUnderscore": "forbid",
                 "trailingUnderscore": "forbid",
                 "filter": {
@@ -673,13 +673,13 @@ module.exports = {
             },
             {
                 "selector": "property",
-                "format": [ "camelCase" ],
+                "format": [ "camelCase", "PascalCase" ],
                 "modifiers": [ "private" ],
                 "leadingUnderscore": "allow"
             },
             {
                 "selector": "property",
-                "format": [ "camelCase" ],
+                "format": [ "camelCase", "PascalCase" ],
                 "modifiers": [ "public" ]
             },
             {
