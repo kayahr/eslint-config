@@ -7,7 +7,8 @@ module.exports = {
         "ecmaFeatures": {
             "impliedStrict": true
         },
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
+        "warnOnUnsupportedTypeScriptVersion": false
     },
     "parser": "@typescript-eslint/parser",
     "plugins": [
