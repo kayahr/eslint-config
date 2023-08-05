@@ -352,7 +352,7 @@ module.exports = {
         "max-len": [
             "warn",
             {
-                "code": 120,
+                "code": 160,
                 "ignoreRegExpLiterals": true
             }
         ],
