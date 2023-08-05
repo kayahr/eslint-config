@@ -1,6 +1,6 @@
 {
   "name": "@kayahr/eslint-config",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "kayahr eslint config for TypeScript projects",
   "main": "eslintrc.js",
   "license": "MIT",
