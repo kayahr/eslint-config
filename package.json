@@ -10,21 +10,23 @@
   },
   "funding": "https://github.com/kayahr/eslint-config?sponsor=1",
   "scripts": {
+    "prepare": "run-s clean build",
     "clean": "rimraf lib",
-    "compile": "tsc",
-    "prepare": "npm run compile",
-    "lint": "eslint --max-warnings 0 --ext .ts src",
-    "cspell": "cspell --no-progress",
-    "test": "npm run cspell && npm run lint"
+    "build": "run-s build:*",
+    "build:compile": "tsc",
+    "test": "run-s test:*",
+    "test:lint": "eslint --max-warnings 0 --ext .ts src",
+    "test:spell": "cspell --no-progress"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "7.7.0",
-    "@typescript-eslint/parser": "7.7.0",
-    "cspell": "8.7.0",
+    "@typescript-eslint/eslint-plugin": "7.9.0",
+    "@typescript-eslint/parser": "7.9.0",
+    "cspell": "8.8.1",
     "eslint": "8.57.0",
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-plugin-simple-import-sort": "12.1.0",
-    "rimraf": "5.0.5",
+    "npm-run-all": "4.1.5",
+    "rimraf": "5.0.7",
     "typescript": "5.4.5"
   },
   "peerDependencies": {
