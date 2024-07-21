@@ -753,7 +753,16 @@ module.exports = {
 
         /** Requires Promise-like values to be handled appropriately */
         "@typescript-eslint/no-floating-promises": [
-            "warn", { "ignoreVoid": true }
+            "warn", {
+                "ignoreVoid": true,
+                "allowForKnownSafeCalls": [
+                    {
+                        "from": "package",
+                        "name": [ "it", "describe" ],
+                        "package": "node:test"
+                    }
+                ]
+            }
         ],
 
         /** Disallow the use of eval()-like methods */

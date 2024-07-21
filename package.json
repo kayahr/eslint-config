@@ -19,6 +19,7 @@
     "test:spell": "cspell --no-progress"
   },
   "devDependencies": {
+    "@types/node": "20.14.11",
     "@typescript-eslint/eslint-plugin": "8.0.0-alpha.48",
     "@typescript-eslint/parser": "8.0.0-alpha.48",
     "cspell": "8.11.0",
