@@ -51,7 +51,7 @@ module.exports = {
          *
          * (Disabled because overruled by @typescript-eslint/no-extra-semi)
          */
-        "no-extra-semi": "off",
+        "no-extra-semi": "warn",
 
         /**
          * Disallow variable or `function` declarations in nested blocks
@@ -298,12 +298,15 @@ module.exports = {
         /** Disallow or enforce spaces inside of blocks after opening block and before closing block */
         "block-spacing": "warn",
 
-        /**
-         * Enforce consistent brace style for blocks
-         *
-         * (Disabled because overruled by @typescript-eslint/brace-style)
-         */
-        "brace-style": "off",
+        /** Enforce consistent brace style for blocks */
+        "brace-style": [
+             "warn",
+             "1tbs",
+             {
+                 "allowSingleLine": true
+             }
+        ],
+
 
         /** Require or disallow trailing commas */
         "comma-dangle": [ "warn", "never" ],
@@ -313,7 +316,7 @@ module.exports = {
          *
          * (Disabled because overruled by @typescript-eslint/comma-spacing)
          */
-        "comma-spacing": "off",
+        "comma-spacing": "warn",
 
         /** Enforce consistent comma style */
         "comma-style": "warn",
@@ -414,12 +417,15 @@ module.exports = {
          */
         "prefer-object-spread": "warn",
 
-        /**
-         * Enforce the consistent use of either backticks, double, or single quotes
-         *
-         * (Disabled because overruled by @typescript-eslint/quotes)
-         */
-        "quotes": "off",
+        /** Enforce the consistent use of either back-ticks, double, or single quotes */
+        "quotes": [
+            "warn",
+            "double",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
 
         /** Require or disallow semicolons instead of ASI */
         "semi": "warn",
@@ -438,7 +444,15 @@ module.exports = {
          *
          * (Disabled because overruled by @typescript-eslint/space-before-function-paren)
          */
-        "space-before-function-paren": "off",
+        /** Enforces consistent spacing before function parenthesis */
+        "space-before-function-paren": [
+            "warn",
+            {
+                "named": "never",
+                "anonymous": "never",
+                "asyncArrow": "always"
+            }
+        ],
 
         /** Enforce consistent spacing inside parentheses */
         "space-in-parens": "warn",
@@ -583,21 +597,8 @@ module.exports = {
             }
         ],
 
-        /**
-         * Bans some built-in types. Function and object is allowed because the recommended replacements are not
-         * compatible.
-         */
-        "@typescript-eslint/ban-types": [
-            "error",
-            {
-                "extendDefaults": true,
-                "types": {
-                    "Function": false,
-                    "object": false,
-                    "Object": false
-                }
-            }
-        ],
+        /** Allow unsafe Function type. */
+        "@typescript-eslint/no-unsafe-function-type": "off",
 
         /**
          * Enforces consistent usage of type assertions
@@ -813,9 +814,6 @@ module.exports = {
          */
         "@typescript-eslint/no-this-alias": "off",
 
-        /** Disallow throwing literals as exceptions */
-        "@typescript-eslint/no-throw-literal": "warn",
-
         /**
          * Disallow the use of type aliases
          *
@@ -954,23 +952,8 @@ module.exports = {
          */
         "@typescript-eslint/unified-signatures": "off",
 
-        /** Enforce consistent brace style for blocks */
-        "@typescript-eslint/brace-style": [
-            "warn",
-            "1tbs",
-            {
-                "allowSingleLine": true
-            }
-        ],
-
-        /** Enforces consistent spacing before and after commas */
-        "@typescript-eslint/comma-spacing": "warn",
-
         /** Enforce default parameters to be last */
         "@typescript-eslint/default-param-last": "warn",
-
-        /** Require or disallow spacing between function identifiers and their invocations */
-        "@typescript-eslint/func-call-spacing": "warn",
 
         /**
          * Enforce consistent indentation
@@ -1004,9 +987,6 @@ module.exports = {
          */
         "@typescript-eslint/no-extra-parens": "off",
 
-        /** Disallow unnecessary semicolons */
-        "@typescript-eslint/no-extra-semi": "warn",
-
         /**
          * Disallow magic numbers
          *
@@ -1036,33 +1016,10 @@ module.exports = {
         /** Disallow unnecessary constructors */
         "@typescript-eslint/no-useless-constructor": "warn",
 
-        /** Enforce the consistent use of either back-ticks, double, or single quotes */
-        "@typescript-eslint/quotes": [
-            "warn",
-            "double",
-            {
-                "avoidEscape": true,
-                "allowTemplateLiterals": true
-            }
-        ],
-
         /** Disallow async functions which have no await expression */
         "@typescript-eslint/require-await": "warn",
 
         /** Enforces consistent returning of awaited values */
-        "@typescript-eslint/return-await": "warn",
-
-        /** Require or disallow semicolons instead of ASI */
-        "@typescript-eslint/semi": "warn",
-
-        /** Enforces consistent spacing before function parenthesis */
-        "@typescript-eslint/space-before-function-paren": [
-            "warn",
-            {
-                "named": "never",
-                "anonymous": "never",
-                "asyncArrow": "always"
-            }
-        ]
+        "@typescript-eslint/return-await": "warn"
     }
 };
