@@ -17,13 +17,25 @@
         "*.tgz"
     ],
     "words": [
+        "backreference",
         "backticks",
         "builtins",
+        "compat",
         "eqeqeq",
+        "IIFE",
         "kayahr",
         "linebreak",
+        "lookaround",
+        "lookarounds",
+        "multilines",
         "nonblock",
-        "Reimer"
+        "nonconstructor",
+        "nonoctal",
+        "nonwords",
+        "nums",
+        "Reimer",
+        "stroustrup",
+        "TSES"
     ],
     "language": "en",
     "enableFiletypes": [
