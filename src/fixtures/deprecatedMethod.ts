@@ -4,3 +4,6 @@ export class Dummy {
         return 23;
     }
 }
+
+// eslint-disable-next-line deprecation/deprecation
+new Dummy().deprecatedMethod();

@@ -3,32 +3,20 @@
     "compilerOptions": {
         "target": "ES2022",
         "lib": [ "ES2022", "DOM" ],
-        "module": "CommonJS",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "rootDir": "src",
         "outDir": "lib",
         "noImplicitAny": true,
         "noImplicitOverride": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
+        "skipLibCheck": true,
         "sourceMap": true,
         "declaration": true,
-        "experimentalDecorators": true,
         "useDefineForClassFields": true,
-        "emitDecoratorMetadata": true,
         "strict": true,
-        "strictPropertyInitialization": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": false,
-        "skipLibCheck": true,
-        "importHelpers": true,
-        "downlevelIteration": true,
-        "preserveSymlinks": true,
-        "allowSyntheticDefaultImports": true
-    },
-    "exclude": [
-        "lib",
-        "node_modules",
-        "doc",
-        "coverage"
-    ]
+        "noUnusedParameters": false
+    }
 }

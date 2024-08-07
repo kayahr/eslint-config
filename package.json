@@ -1,32 +1,53 @@
 {
-  "name": "@kayahr/eslint-config",
-  "version": "3.0.0-alpha.2",
-  "description": "kayahr eslint config for TypeScript projects",
-  "main": "eslintrc.js",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kayahr/eslint-config"
-  },
-  "funding": "https://github.com/kayahr/eslint-config?sponsor=1",
-  "scripts": {
-    "prepare": "run-s clean build",
-    "clean": "rimraf lib",
-    "build": "run-s build:*",
-    "build:compile": "tsc",
-    "test": "run-s test:*",
-    "test:lint": "eslint --max-warnings 0 --ext .ts src",
-    "test:spell": "cspell --no-progress"
-  },
-  "devDependencies": {
-    "@types/node": "20.14.11",
-    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.48",
-    "@typescript-eslint/parser": "8.0.0-alpha.48",
-    "cspell": "8.11.0",
-    "eslint-plugin-deprecation": "3.0.0",
-    "eslint-plugin-simple-import-sort": "12.1.1",
-    "npm-run-all": "4.1.5",
-    "rimraf": "6.0.1",
-    "typescript": "5.5.3"
-  }
+    "name": "@kayahr/eslint-config",
+    "version": "4.0.0",
+    "description": "kayahr eslint config for TypeScript projects",
+    "type": "module",
+    "exports": "./lib/main/eslint.config.js",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kayahr/eslint-config"
+    },
+    "funding": "https://github.com/kayahr/eslint-config?sponsor=1",
+    "scripts": {
+        "prepare": "run-s clean build",
+        "clean": "rimraf lib",
+        "build": "run-s build:*",
+        "build:compile": "tsc",
+        "test": "run-s test:*",
+        "test:unit": "node --test",
+        "test:lint": "eslint --max-warnings 0",
+        "test:spell": "cspell --no-progress"
+    },
+    "files": [
+        "lib/main",
+        "src/main"
+    ],
+    "overrides": {
+        "eslint": "^9.8.0"
+    },
+    "devDependencies": {
+        "@types/eslint": "9.6.0",
+        "@types/eslint__js": "8.42.3",
+        "@types/lodash": "4.17.7",
+        "@types/lodash.merge": "4.6.9",
+        "@types/node": "22.1.0",
+        "cspell": "8.13.1",
+        "npm-run-all": "4.1.5",
+        "rimraf": "6.0.1",
+        "typescript": "5.5.4"
+    },
+    "dependencies": {
+        "@eslint/compat": "^1.1.1",
+        "@eslint/js": "^9.8.0",
+        "@stylistic/eslint-plugin": "^2.6.1",
+        "eslint": "^9.8.0",
+        "eslint-plugin-deprecation": "3.0.0",
+        "eslint-plugin-regexp": "^2.6.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^15.9.0",
+        "lodash": "^4.17.21",
+        "typescript-eslint": "^8.0.1"
+    }
 }
