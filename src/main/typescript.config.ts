@@ -1,6 +1,4 @@
-import { type FixupPluginDefinition, fixupPluginRules } from "@eslint/compat";
 import { type TSESLint } from "@typescript-eslint/utils";
-import deprecationPlugin from "eslint-plugin-deprecation";
 import merge from "lodash.merge";
 import typescriptPlugin from "typescript-eslint";
 
@@ -10,11 +8,9 @@ export const customConfig: TSESLint.FlatConfig.Config = {
     files: defaultConfig.files,
     languageOptions: {
         parserOptions: {
-            project: "tsconfig.json"
+            project: "tsconfig.json",
+            warnOnUnsupportedTypeScriptVersion: false
         }
-    },
-    plugins: {
-        deprecation: fixupPluginRules(deprecationPlugin as unknown as FixupPluginDefinition)
     },
     rules: {
         /** @see https://typescript-eslint.io/rules/array-type */
@@ -150,6 +146,9 @@ export const customConfig: TSESLint.FlatConfig.Config = {
 
         /** @see https://typescript-eslint.io/rules/no-base-to-string */
         "@typescript-eslint/no-base-to-string": "off",
+
+        /** @see https://typescript-eslint.io/rules/no-deprecated */
+        "@typescript-eslint/no-deprecated": "warn",
 
         /** @see https://typescript-eslint.io/rules/no-dupe-class-members */
         "@typescript-eslint/no-dupe-class-members": "warn",
@@ -402,9 +401,6 @@ export const customConfig: TSESLint.FlatConfig.Config = {
 
         /** @see https://typescript-eslint.io/rules/unified-signatures */
         "@typescript-eslint/unified-signatures": "off",
-
-        /** @see https://www.npmjs.com/package/eslint-plugin-deprecation */
-        "deprecation/deprecation": "warn",
 
         /** @see https://eslint.org/docs/latest/rules/no-var */
         "no-var": "warn",
