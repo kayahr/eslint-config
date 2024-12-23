@@ -169,7 +169,7 @@ export const customConfig: TSESLint.FlatConfig.Config = {
         "@typescript-eslint/no-empty-interface": "off",
 
         /** @see https://typescript-eslint.io/rules/no-empty-object-type */
-        "@typescript-eslint/no-empty-object-type": "warn",
+        "@typescript-eslint/no-empty-object-type": "off",
 
         /** @see https://typescript-eslint.io/rules/no-explicit-any */
         "@typescript-eslint/no-explicit-any": "off",
