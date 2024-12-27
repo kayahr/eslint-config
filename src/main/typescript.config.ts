@@ -51,8 +51,22 @@ export const customConfig: TSESLint.FlatConfig.Config = {
         "@typescript-eslint/explicit-function-return-type": [
             "warn",
             {
+                /** Whether to allow arrow functions that start with the `void` keyword. */
+                allowConciseArrowFunctionExpressionsStartingWithVoid: false,
+                /** Whether to ignore arrow functions immediately returning a `as const` value. */
+                allowDirectConstAssertionInArrowFunctions: true,
+                /** Whether to ignore function expressions (functions which are not part of a declaration). */
                 allowExpressions: true,
-                allowTypedFunctionExpressions: true
+                /** Whether to ignore functions that don't have generic type parameters. */
+                allowFunctionsWithoutTypeParameters: true,
+                /** Whether to ignore functions immediately returning another function expression. */
+                allowHigherOrderFunctions: true,
+                /** Whether to ignore immediately invoked function expressions (IIFEs). */
+                allowIIFEs: false,
+                /** Whether to ignore type annotations on the variable of function expressions. */
+                allowTypedFunctionExpressions: true,
+                /** An array of function/method names that will not have their arguments or return values checked. */
+                allowedNames: []
             }
         ],
 
