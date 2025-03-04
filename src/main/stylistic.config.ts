@@ -70,6 +70,9 @@ export const customConfig: Linter.Config = {
         /** @see https://eslint.style/rules/default/function-paren-newline */
         "@stylistic/function-paren-newline": "off",
 
+        /** @see https://eslint.style/rules/default/generator-star-spacing */
+        "@stylistic/generator-star-spacing": "warn",
+
         /** @see https://eslint.style/rules/default/implicit-arrow-linebreak */
         "@stylistic/implicit-arrow-linebreak": "off",
 
