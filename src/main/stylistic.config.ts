@@ -1,7 +1,7 @@
 import stylistic from "@stylistic/eslint-plugin";
 import type { Linter } from "eslint";
 
-export const defaultConfig = stylistic.configs["recommended-flat"];
+export const defaultConfig = stylistic.configs.recommended;
 export const customConfig: Linter.Config = {
     rules: {
         /** @see https://eslint.style/rules/default/array-bracket-newline */
