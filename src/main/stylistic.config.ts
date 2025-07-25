@@ -261,7 +261,7 @@ export const customConfig: Linter.Config = {
             "warn",
             "double",
             {
-                allowTemplateLiterals: true,
+                allowTemplateLiterals: "always",
                 avoidEscape: true
             }
         ],
