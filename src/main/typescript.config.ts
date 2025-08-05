@@ -211,7 +211,7 @@ export const customConfig: TSESLint.FlatConfig.Config = {
                 allowForKnownSafeCalls: [
                     {
                         from: "package",
-                        name: [ "it", "describe" ],
+                        name: [ "it", "describe", "test", "suite" ],
                         package: "node:test"
                     }
                 ],
