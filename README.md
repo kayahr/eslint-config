@@ -1,6 +1,9 @@
 kayahr eslint config
 ====================
 
+| :warning: This project is no longer maintained because the author switched from ESLint to [Oxlint](https://www.npmjs.com/package/oxlint) :warning: |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 Shared eslint configuration for my personal TypeScript projects.
 
 
